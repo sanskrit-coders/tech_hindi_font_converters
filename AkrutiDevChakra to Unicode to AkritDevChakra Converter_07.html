@@ -1,0 +1,691 @@
+﻿<html>
+<head> <B><Font color = darkblue><CENTER> AkrutiDevChakra <==> Unicode Devanagari Font Converter (26-04-2013 ) </font></B></title><br>
+
+<script type="text/javascript">
+
+// Prepared with earlier converter for Akruti_RBI for FoxReplace.
+
+function convert_to_unicode()
+{
+
+var array_one = new Array(
+
+"eR" , "ीं" ,
+"er" , "ी" ,
+"ef" , "ि" ,
+"eq" , "ि" ,
+"ि" , "f" ,
+"a" , "&ी" ,
+
+"F¥" , "ईं" ,
+"FĄ" , "ईं" ,
+"¥" , "ं&" ,
+"Ą" , "ं&" ,
+"X" , "sं&" ,
+"x" , "s&" ,
+"Ù" , "sõ" ,
+"÷" , "sõ" ,
+
+
+"^" , "्र" ,
+"£" , "्र" ,
+"´" , "्र" ,
+"Ï" , "्र" ,
+
+"keÌ" , "क्" ,
+"keĚ" , "क" ,
+"keÀ" , "क" ,
+"keŔ" , "क" , // 22-4-2013
+"ke" , "व" ,
+"k" , "व्" ,
+
+"HeÌ" , "फ्" ,
+"HeĚ" , "फ" ,
+"heĚ" , "फ" ,
+"HeÀ" , "फ" ,
+"heÀ" , "फ" ,
+"HeŔ" , "फ" , // 22-4-2013
+"heŔ" , "फ" , // 22-4-2013
+"He" , "प" ,
+"he" , "प" ,
+"H" , "प्" ,
+"h" , "प्" ,
+
+//------------
+
+"j" , "र" ,
+"n" , "ह" ,
+"c" , "म्" ,
+
+"Y" , "भ्" ,
+"l" , "त्" ,
+"*" , "ङ" ,
+"®" , "च्" ,
+"ł" , "य्" ,
+"³" , "य्" ,
+"î" , "य्" ,  // should it be halant + "य्" ?
+"y" , "ब्" ,
+"u" , "ल्" ,
+"K" , "ख्" ,
+"O" , "ध्" ,
+"m" , "स्" ,
+"L" , "थ्" ,
+"o" , "द" ,
+"Ü" , "द्व" ,
+"Ê" , "त्त्" ,
+"p" , "ज्" ,
+"J" , "व्" ,
+"ø" , "ष्" ,
+"ì" , "ट" ,
+"\"" , "ठ" ,
+"°" , "त्र्" ,
+"M" , "श्" ,
+//"ê" , "द्र" ,
+"~" , "।" ,
+"Î" , "द्द" ,
+//"ã" , "क्ष्" ,
+"C" , "ण्" ,
+"ª" , "रू" ,
+//"ä" , "ग्" ,
+"Á" , "ध्" ,
+
+//"Ð" , "द्य्" , // this Ð is different than the following!!!
+"Đ" , "द्य्" ,
+"¨" , "द्म्" ,
+"¢" , "दृ" ,
+"V" , "न्न्" ,
+//"›" , "ड़" ,
+
+"¬" , "क्र्" , // is this correct? 22-4-13
+//"¬" , "व्र" ,  //22-4-13
+"Ò" , "प्र्" ,
+"Ň" , "प्र्" ,
+"í" , "छ" ,
+"|" , "र्f" ,
+"é" , "श्व्" ,
+"×" , "द्ध" ,
+"" , "ज़्" , // this is NOT blank
+"½" , "श्च्" ,
+
+"ä" , "ष्ट" ,
+"\˙" , "ष्ठ" ,
+"\$" , "त्र्" ,
+"\%" , "ज्ञ्" ,
+//"ÿ" , "ज्ञ्" ,
+"ď" , "ह्म्" ,
+"Ű" , "हृ" ,
+"•" , "ड्ड" ,
+
+//"Ÿ" , "ढ़" ,
+//"¾" , "ड" ,
+//"Ñ" , "ढ" ,
+
+"æ\[" , "ड़" ,
+"ć\[" , "ड़" ,
+"\["  , "ड" ,
+"æ\{"  , "ढ़" ,
+"ć\{" , "ढ़" ,
+"\{"  , "ढ" ,
+"ćज" , "ज़" ,
+
+
+"é" , "श्व्" ,
+"©" , "रू" ,
+"¸" , "ख्र्" , 
+"Í" , "श्" ,
+"à" , "द्ध" ,
+"P" , "झ्" ,
+"Ë" , "ह्" ,
+"Æ" , "ट्ट" ,
+//"Ô" , "ह्" ,
+"ö" , "-" , // "ह" , 23-4-13
+
+"ÿ" , "ष्ठ" ,
+"û" , "ग्र्" ,
+"Û" , "हृ" ,
+"Ð" , "द्य्" ,
+"ï" , "ह्म्" ,
+"ê" , "द्र" ,
+
+
+//----------
+
+"ţ" , "ठ" ,
+"þ" , "ठ" ,
+"˝" , "श्च्" ,
+"#" , "क्ष्" ,
+"v" , "न्" ,
+//"ô" , "न्" ,
+"i" , "ग्" ,
+"I" , "घ्" ,
+"ű" , "ग्र्" ,
+"ę" , "द्र" ,
+"Þ" , "श्र्" , // 23-4-2013
+"Ţ" , "श्र्" ,
+"\<" , "ष्" ,
+"ě" , "ट" ,
+"\=" , "ृ" ,
+"Ş" , "रु" ,
+"\]" , "॰" ,
+"¤" , "॰" ,
+
+//-----------
+
+//"Ì" , "्" , // 23-4-13
+"d" , "्" ,
+"Deew" , "औ" ,
+"Dees" , "ओ" ,
+"Dee" , "आ" ,
+"De" , "अ" ,
+"्e" , "" ,
+"e" , "ा" ,
+//"्ाÀ" , "" ,
+//"r" , "ी" ,
+"g" , "ु" ,
+"t" , "ू" ,
+"ा@" , "ॉ" ,
+"É" , "ृ" ,
+"Q" , "ैं" ,
+"ाw" , "ौ" ,
+"w" , "ै" ,
+"ाs" , "ो" ,
+"s" , "े" ,
+"ाW" , "ों" ,
+"W" , "ें" ,
+"b" , "ं" ,
+"B" , "ँ" ,
+"ë" , "ः" ,
+"ाै" , "ौ" ,
+"F\&" , "ई" ,
+"F" , "इ" ,
+"त्रÝ" , "ऋ" ,
+"त्र\+" , "ऋ" ,
+"T" , "ऊ" ,
+"G" , "उ" ,
+"Sे" , "ऐ" ,
+"S" , "ए" ,
+"आे" , "ओ" ,
+"आ@" , "ऑ"     ) 
+
+//**********************************************
+
+    var array_one_length = array_one.length ;
+
+    var modified_substring = document.getElementById("legacy_text").value  ;	
+	
+document.getElementById("unicode_text").value = "Conversion in progress.."  ;  
+
+//****************************************************
+//  Break the long text into small bunches of chunk_size  characters each.
+//****************************************************
+    var text_size = modified_substring.length ;
+
+    var processed_text = '' ;  //blank
+
+    var sthiti1 = 0 ;  var sthiti2 = 0 ;  var chale_chalo = 1 ;
+ 
+    var chunk_size = 6000; // this charecter long text will be processed in one go.
+
+    while ( chale_chalo == 1 ) 
+    {
+     sthiti1 = sthiti2 ;
+
+     if ( sthiti2 < ( text_size - chunk_size ) )  
+     { 
+      sthiti2 +=  chunk_size ;
+//      while (document.getElementById("legacy_text").value.charAt ( sthiti2 ) != ' ') {sthiti2--;} 
+//This was making problem if there is no 'space' in the whole document.
+     } 
+     else  { sthiti2 = text_size  ;  chale_chalo = 0 }
+
+  var modified_substring = document.getElementById("legacy_text").value.substring ( sthiti1, sthiti2 )  ;
+
+  Replace_Symbols( ) ;
+
+  var processed_text = processed_text + modified_substring ;
+	  
+document.getElementById("unicode_text").value = "Conversion in progress.." + '\n\n' + 'Conversion of ' + sthiti2 + ' charecters out of ' + text_size + ' completed.' ; 
+
+    }
+  
+document.getElementById("unicode_text").value = processed_text  ;  
+
+
+// --------------------------------------------------
+
+
+function Replace_Symbols( )
+
+{
+
+//substitute array_two elements in place of corresponding array_one elements
+
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
+{
+for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+
+{ 
+//******************************************************
+idx = 0  ;  // index of the symbol being searched for replacement
+
+while (idx != -1 ) //while-00
+{
+
+modified_substring = modified_substring.replace( array_one[ input_symbol_idx ] , array_one[input_symbol_idx+1] )
+idx = modified_substring.indexOf( array_one[input_symbol_idx] )
+
+} // end of while-00 loop
+
+} // end of for loop
+
+
+modified_substring = modified_substring.replace( /([ंँ॰])([ािीुूृेैोौ])/g , "$2$1" );
+
+modified_substring = modified_substring.replace( /([ंँ])्र/g , "्र$1" );
+
+//rem changing व to क  and प to फ etc
+
+modified_substring = modified_substring.replace( /व([ुूृॄेैं&ँर्]*)[ĚŔÀ]/g , "क$1" );
+
+modified_substring = modified_substring.replace( /व्र([ुूृॄेैं&ँर्]*)[ĚŔÀ]/g , "क्र$1" );
+
+modified_substring = modified_substring.replace( /प([ुूृॄेैं&ँर्]*)[ĚŔÀ]/g , "फ$1" );
+
+modified_substring = modified_substring.replace( /प्र([ुूृॄेै&ंँ]*)[ĚŔÀ]/g , "फ्र$1" );
+
+modified_substring = modified_substring.replace( /रं[ĚŔÀ]/g , "रुं" );
+
+modified_substring = modified_substring.replace( /[ĚŔÀ]/g , ""   );
+
+
+modified_substring = modified_substring.replace( /ćक/g , "क़" );
+modified_substring = modified_substring.replace( /ćख/g , "ख़" );
+modified_substring = modified_substring.replace( /ćग/g , "ग़" );
+modified_substring = modified_substring.replace( /ćफ/g , "फ़" );
+
+
+// following statements for adjusting postion of i maatraas.
+
+modified_substring = modified_substring.replace(   /([Efq])([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])/g , "$2$1" ) ;
+
+modified_substring = modified_substring.replace(   /([Efq])(्)([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace(   /([Efq])(्)([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace( /f/g , "ि" ) ;
+modified_substring = modified_substring.replace( /q/g , "ि" ) ;
+modified_substring = modified_substring.replace( /E/g , "िं" ) ;
+
+
+//following three statement for adjusting position of reph ie, half r .
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसह])([ािीुूृेैोौंँ]*)([&])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसह])([्])([&])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /&/g , "र्" ) ;
+
+// remove maatras typed wrongly
+modified_substring = modified_substring.replace( /([ािीुूृेैोौंँ])([ािीुूृेैोौ])/g , "$1" ) ;
+
+
+} // end of IF  statement  meant to  supress processing of  blank  string.
+
+} // end of the function  Replace_Symbols
+
+} // end of convert_to_unicode function
+
+
+
+function convert_unicode_to_AkritiDevChakra ()
+{
+
+var array_one = new Array(
+"क्र्" , "¬" ,
+"प्र" , "Ňe" ,
+"त्र" , "$e" ,
+"ख्र" , "¸e" ,
+"ग्र्" , "űe" ,
+"द्र" , "ę" ,
+"श्र" , "Þe" ,
+"क्ष" , "#e" ,
+"ज्ञ" , "%e" ,
+"द्व" , "Ü" ,
+"त्त" , "Êe" ,
+"द्द" , "Î" ,
+"द्म" , "¨e" ,
+"दृ" , "¢" ,
+"न्न" , "Ve" ,
+"ष्ट" , "ä" ,
+"ड्ड" , "•" ,
+"श्व" , "ée" ,
+"रु" , "Ş" ,
+"रू" , "©" ,
+"ट्ट" , "Æ" ,
+"ष्ठ" , "ÿ" ,
+"हृ" , "Û" ,
+"द्य" , "Ðe" ,
+"द्ध" , "à" ,
+"ह्म" , "ïe" ,
+"श्च" , "˝e" ,
+
+"छ्र" , "í^" ,
+"ष्ट्र" , "ä^" ,
+"ट्र" , "ì^" ,
+"ठ्र" , "þ^" ,
+"ड्र" , "\[^" ,
+"ढ्र" , "\{^" ,
+
+"्र" , "´" ,
+//"्र" , "Ï" ,  // see where this is to be used
+
+"ज़्" , "" ,  // this is NOT blank
+// "ज़" , "ćpe" , // all nuktas at one place
+"ज" , "pe" ,
+
+"भ" , "Ye" ,
+"ङ" , "*" ,
+"ब" , "ye" ,
+"ल" , "ue" ,
+"स" , "me" ,
+"थ" , "Le" ,
+"ण" , "Ce" ,
+"ध" , "Áe" ,
+"प" , "he" ,
+"छ" , "í" ,
+//"र्f" , "|" ,
+
+"त" , "le" ,
+//"ड़" , "ć[" ,  // all nuktas dealt at one place
+"ड" , "[" ,
+//"ढ़" , "ć{" ,
+"ढ" , "{" ,
+
+"व" , "ke" ,
+"ख" , "Ke" ,
+"झ" , "Pe" ,
+"य" , "îe" ,
+"ह्" , "Ë" ,
+"ह" , "n" ,
+"म" , "ce" ,
+"ठ" , "þ" ,
+"च" , "®e" ,
+"क्" , "keÌ" ,
+//"क" , "keŔ" ,
+"फ्" , "HeÌ" ,
+//"फ" , "heŔ" ,
+"न" , "ve" ,
+"घ" , "Ie" ,
+"ग" , "ie" ,
+"द" , "o" ,
+"श" , "Íe" ,
+"ष" , "<e" ,
+"ट" , "ě" ,
+"र" , "j" ,
+"॰" , "¤" ,
+"।" , "~" ,
+"\-" , "ö" ,
+
+"e्" , "" ,
+"्" , "d" ,
+
+"औ" , "Deew" ,
+"आ" , "Dee" ,
+"अ" , "De" ,
+"ईं" , "FĄ" ,
+"ई" , "F&" ,
+"इ" , "F" ,
+"ऋ" , "°e+" ,
+"ऊ" , "T" ,
+"उ" , "G" ,
+"ऐ" , "Ss" ,
+"ए" , "S" ,
+"ओ" , "Dees" ,
+"ऑ" , "Dee@" ,
+
+
+"&ी" , "a" ,
+"sं&" , "X" ,
+"ं&" , "Ą" ,
+"s&" , "x" ,
+"sõ" , "÷" ,
+
+
+"ा" , "e" ,
+"ीं" , "eR" ,
+"ी" , "er" ,
+"ु" , "g" ,
+"ू" , "t" ,
+"ॉ" , "e@" ,
+"ृ" , "É" ,
+"ैं" , "Q" ,
+"ै" , "w" ,
+"ों" , "eW" ,
+"ो" , "es" ,
+"ें" , "W" ,
+"े" , "s" ,
+"ौ" , "ew" ,
+"ं" , "b" ,
+"ँ" , "B" ,
+"ः" , "ë" ,
+
+"०" , "0" ,
+"१" , "1" ,
+"२" , "2" ,
+"३" , "3" ,
+"४" , "4" ,
+"५" , "5" ,
+"६" , "6" ,
+"७" , "7" ,
+"८" , "8" ,
+"९" , "9"     ) ;
+
+
+
+    var array_one_length = array_one.length ;
+
+    var modified_substring = document.getElementById("unicode_text").value  ;	
+	
+document.getElementById("legacy_text").value = "Conversion in progress.."  ;  
+
+//****************************************************
+//  Break the long text into small bunches of chunk_size  characters each.
+//****************************************************
+    var text_size = modified_substring.length ;
+
+    var processed_text = '' ;  //blank
+
+    var sthiti1 = 0 ;  var sthiti2 = 0 ;  var chale_chalo = 1 ;
+ 
+    var chunk_size = 6000; // this charecter long text will be processed in one go.
+
+    while ( chale_chalo == 1 ) 
+    {
+     sthiti1 = sthiti2 ;
+
+     if ( sthiti2 < ( text_size - chunk_size ) )  
+     { 
+      sthiti2 +=  chunk_size ;
+//      while (document.getElementById("unicode_text").value.charAt ( sthiti2 ) != ' ') {sthiti2--;} 
+//This was making problem if there is no 'space' in the whole document.
+     } 
+     else  { sthiti2 = text_size  ;  chale_chalo = 0 }
+
+  var modified_substring = document.getElementById("unicode_text").value.substring ( sthiti1, sthiti2 )  ;
+
+  Replace_Symbols( ) ;
+
+  var processed_text = processed_text + modified_substring ;
+	  
+document.getElementById("legacy_text").value = "Conversion in progress.." + '\n\n' + 'Conversion of ' + sthiti2 + ' charecters out of ' + text_size + ' completed.' ; 
+
+    }
+  
+document.getElementById("legacy_text").value = processed_text  ;  
+
+
+// --------------------------------------------------
+
+
+function Replace_Symbols( )
+
+{
+
+//substitute array_two elements in place of corresponding array_one elements
+
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
+{
+
+// to force halant at last letter
+modified_substring = modified_substring.replace( /्([ \r\n\,\।])/g , 'd$1' ) ;
+
+
+/*
+// maraathi style reph 
+modified_substring = modified_substring.replace ( /ऱ्/g , "N" )  ; 
+	   
+// maraathi style reph ; there is a hidden ZWJ after र् 
+modified_substring = modified_substring.replace ( /र्‍/g , "N" )  ; 	   
+	   
+modified_substring = modified_substring.replace ( /त्र्य/g , "$य" )  ; 
+modified_substring = modified_substring.replace ( /श्र्य/g , "ßय" )  ; 
+
+*/
+
+// replace the two-byte nukta_varNa with corresponding one-byte nukta varNas.
+modified_substring = modified_substring.replace ( /क़/g , "क़" )  ; 
+modified_substring = modified_substring.replace ( /ख़‌/g , "ख़" )  ;
+modified_substring = modified_substring.replace ( /ग़/g , "ग़" )  ;
+modified_substring = modified_substring.replace ( /ज़/g , "ज़" )  ;
+modified_substring = modified_substring.replace( 'ज' + '्' + '़' , 'ज़्' ) ;
+modified_substring = modified_substring.replace ( /ड़/g , "ड़" )  ;
+modified_substring = modified_substring.replace ( /ढ़/g , "ढ़" )  ;
+modified_substring = modified_substring.replace ( /ऩ/g , "ऩ" )  ;
+modified_substring = modified_substring.replace ( /फ़/g , "फ़" )  ;
+modified_substring = modified_substring.replace ( /य़/g , "य़" )  ;
+modified_substring = modified_substring.replace ( /ऱ/g , "ऱ" )  ;
+
+
+
+
+// following statements for adjusting postion of i maatraas.
+
+modified_substring = modified_substring.replace( /िं/g , "E" ) ;
+modified_substring = modified_substring.replace( /ि/g , "f" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])([Ef])/g , "$2$1" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])(्)([Ef])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])(्)([Ef])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /f/g , "ef" ) ;
+
+
+
+// **************
+
+
+
+//following three statement for adjusting position of reph ie, half r .
+
+
+modified_substring = modified_substring.replace( /र्([कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])([्])/g , "$1$2र्" ) ;
+
+modified_substring = modified_substring.replace( /र्([कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])([्])/g , "$1$2र्" ) ;
+
+modified_substring = modified_substring.replace( /र्([कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक़ख़ग़ज़ड़ढ़फ़])([ाॅिीुूृेैोौंँ]*)/g , "$1$2&" ) ;
+
+
+//*************
+
+
+modified_substring = modified_substring.replace( /क़/g , "ćkeÀ") ;
+modified_substring = modified_substring.replace( /ख़/g , "ćKe") ;
+modified_substring = modified_substring.replace( /ग़/g , "ćie") ;
+modified_substring = modified_substring.replace( /ज़/g , "ćpe") ;
+modified_substring = modified_substring.replace( /ड़/g , "ć\[") ;
+modified_substring = modified_substring.replace( /ढ़/g , "ć\{") ;
+modified_substring = modified_substring.replace( /ऩ/g , "ćve") ;
+modified_substring = modified_substring.replace( /फ़/g , "ćHeÀ") ;
+modified_substring = modified_substring.replace( /य़/g , "ćîe") ;
+modified_substring = modified_substring.replace( /ऱ/g , "ćj") ;
+
+
+//******************
+
+
+//rem changing व to क  and प to फ etc
+
+modified_substring = modified_substring.replace( /क([ुूृॄेैं&ँ]*)/g , "ke$1À" );
+
+modified_substring = modified_substring.replace( /क्र([ुूृॄेैं&ँ]*)/g , "ke´$1À" );
+
+modified_substring = modified_substring.replace( /फ([ुूृॄेैं&ँ]*)/g , "He$1À" );
+
+modified_substring = modified_substring.replace( /फ्र([ुूृॄेैं&ँ]*)/g , "He´$1À" );
+
+
+modified_substring = modified_substring.replace( /रुं/g , "jbÀ" );
+
+
+//******************************
+
+
+for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+
+{ 
+//******************************************************
+idx = 0  ;  // index of the symbol being searched for replacement
+
+while (idx != -1 ) //while-00
+{
+
+modified_substring = modified_substring.replace( array_one[ input_symbol_idx ] , array_one[input_symbol_idx+1] )
+idx = modified_substring.indexOf( array_one[input_symbol_idx] )
+
+} // end of while-00 loop
+
+} // end of for loop
+
+} // end of IF  statement  meant to  supress processing of  blank  string.
+
+
+
+modified_substring = modified_substring.replace ( /µ/g , "ef" ) 
+
+ 
+
+} // end of the function  Replace_Symbols
+
+} // end of convert_to_AkritiDevChakra function
+
+
+
+</script>
+</head>
+
+
+<body>
+<form name="form1"><br/>
+<b>AkrutiDevChakra font text-box </b><br/>
+<HTML><BODY bgColor='yellow'><CENTER>
+
+<textarea name="TextToConvert" id="legacy_text" cols="80" rows="6"></textarea> <br>
+
+<div align="middle">
+<CENTER><input  type="button" name="converter" id="converter" value=" Convert to Unicode >> " onClick="convert_to_unicode();" accesskey="c" title="शॉर्टकट alt+c"> 
+</div>  <br>
+
+<b><CENTER>Unicode Devanagari text-box</b> <br/>
+<textarea name="ConvertedText" id="unicode_text" cols="80" rows="8"></textarea>
+<br />
+
+<div align="middle">
+<CENTER><input  type="button" value=" Convert to AkritiDevChakra " onClick=" convert_unicode_to_AkritiDevChakra ();" </div>  <br>
+
+
+</form>
+</body>
+
+</html>
+
