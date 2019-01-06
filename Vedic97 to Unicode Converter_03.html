@@ -1,0 +1,473 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<body bgcolor="yellow"> <!--"00FF00" for green -->
+<title>Vedic97 ==> यूनिकोड परिवर्तित्र</title>
+<B><Font color = darkblue><CENTER> Vedic97 ==> यूनिकोड परिवर्तित्र (16-02-2014) </font></B><br>
+
+<script type="text/javascript">
+
+// especially designed to convert DevalSmriti.pdf from Maharshi site.
+
+function convert_to_unicode()
+{
+
+var array_one = new Array(
+
+// i … ≤ \‚ \· Æ æ  --- i_kaar
+
+// R is reph
+
+//
+"e " , "e" ,  // e kii maatraa
+"\[ " , "\[" ,  // ara
+
+"O " , "O" ,  // RI KI MAATRAA
+"R " , "R" ,
+
+//
+
+
+"\|" , "Rं" ,
+
+"â" , "" ,
+"ì" , "" ,
+"Ü" , "" ,
+"ú" , "" ,
+"»" , "" ,
+"≥" , "" , 
+"‡" , "" ,
+"¡" , "" , // after ka, and kta.
+	
+"«" , "ी" ,
+"Ù" , "हू" ,
+"Û" , "हुः" ,
+"Ï" , "ङ्घ" ,
+"Ì" , "द्ग" , //udgata
+"Í" , "शृ" , //shringar
+"ƒ" , "ङ्ख" ,
+"Œ" , "भ्द्य" , // bh is half
+"ä" , "ब्द" , // shatabda
+"ë" , "ु" , // u kii maatraa
+"Õ" , "ङ्क्ष" ,
+"õ" , "ङ" ,
+"Ô" , "ञ्ज" , // ganja
+"ó" , "ड्ढ" , // chaddha
+"µ" , "द्म" , //padma
+"!" , "ढ" , // Dhakosala
+"Ÿ" , "ै" ,// kailash
+"™" , "्" , // halanta
+"&" , "द्रु" , //druta gati
+"\\" , "ँ" ,
+"‘" , "क्क" , // kukkuta
+"´" , " द्ध" ,
+"~" , "घ्" , // vighna
+"" , "ह्ण" , 
+
+
+"˝" , "ँ" , //  should it be 'ं' ?
+
+"¸" , "हु" ,
+
+"#" , "ठ" ,
+
+"◊" , "ह्व" ,
+
+"ß" , "स्र" ,
+
+"Ñ" , "ङ्म" ,
+
+"À" , "त्न" ,
+
+"∆" , "ज्ज" ,
+
+" ̈" , "उ" , //
+
+"ª" , "म्न" ,
+
+"ﬂ" , "घ्न" ,
+
+"fl" , "घ्न" ,
+
+//
+"Ä " , "\u0952" ,   // " ॒" ,
+
+"û " , "\u0952" ,
+
+"ô " , "\u0952" ,
+
+"Ö " , "\u0952" ,
+
+"ÿ " , "\u0951" , // ॑
+
+"Ã " , "\u0951" ,
+
+// 
+"Ä" , "\u0952" ,   // " ॒" ,
+
+"û" , "\u0952" ,
+
+"ô" , "\u0952" ,
+
+"Ö" , "\u0952" ,
+
+"ÿ" , "\u0951" , // ॑
+
+"Ã" , "\u0951" ,
+
+"b" , "ब" ,
+"c" , "च" ,
+"d" , "द" ,
+"f" , "फ" ,
+"g" , "ग" ,
+"h" , "ह" ,
+"j" , "ज" ,
+"k" , "क" ,
+"l" , "ल" ,
+"m" , "म" ,
+"n" , "न" ,
+"p" , "प" ,
+"q" , "थ" ,
+"r" , "र" ,
+"s" , "स" ,
+"t" , "त" ,
+"v" , "व" ,
+"x" , "श" ,
+"y" , "य" ,
+"z" , "छ" ,
+
+"B" , "ब्" ,
+"C" , "च्" ,
+"D" , "ज्ञ" ,
+"G" , "ग्" ,
+"H" , "ञ्" ,
+"J" , "ज्" ,
+"K" , "क्" ,
+"L" , "ल्" ,
+"M" , "म्" ,
+"N" , "न्" ,
+"P" , "प्" ,
+"Q" , "थ्" ,
+//"R" , "र" ,
+"S" , "स्" ,
+"T" , "त्" ,
+"V" , "व्" ,
+"W" , "ष" ,
+"X" , "श्" ,
+"Y" , "य्" ,
+//"Z" , "छ" ,
+"N" , "न्" ,
+"S" , "स्" ,
+"T" , "त्" ,
+"M" , "म्" ,
+"C" , "च्" ,
+"X" , "श्" ,
+
+"..." , "i" ,
+"." , "भ" ,
+"\>", "भ्" ,  
+
+"%" , "ख" ,
+":" , "ख्" ,
+"\`" , "घ" ,
+"$" , "ट" ,
+"@" , "ड" ,
+"\," , "ण" ,
+"\<" , "ण्" ,
+"\/" , "ध" ,
+"\?" , "ध्" ,
+"\„" , "ष्" ,
+
+"£" , "क्र" ,
+"ˇ_" , "क्त" ,
+"ˇ" , "त्त" ,
+"Ê" , "त्त्" ,
+"¶" , "ग्न" ,
+"˚" , "ङ्क" ,
+"ï" , "ङ्कु" ,
+"¤" , "ङ्क्त" ,
+"©" , "ङ्ग" ,
+"∞" , "च्च" ,
+"ç" , "ञ्च" ,
+
+"‰" , "्य" ,
+"\[" , "्र" ,
+"\{" , "द्र" ,
+"\^" , "्र" ,  // niiche waalaa
+
+"í" , "श्च" ,
+"≈" , "श्र" ,
+"ê" , "श्व" ,
+"∑" , "ष्ट" ,
+"œ" , "ष्ठ" ,
+"Ç" , "ष्ट्व" ,
+"ò" , "  स्न" , //
+"à" , "त्न" ,
+"\}" , "त्र्" ,
+"•" , "न्न" ,
+"∂" , "द्द" ,
+"ı" , "द्ध" ,
+"∫" , "द्भ" ,
+"¥" , "द्य" ,
+"√" , "द्व" ,
+"\›" , "ध्न" ,
+"\“" , "प्न" ,
+"¢" , "प्त" , 
+"\ˆ" , "ह्न" ,
+"˜" , "ह्म" ,
+"Á" , "ह्य" ,
+"Ó" , "ह्र" ,
+"\=" , "क्ष" ,
+"\+" , "क्ष्" ,
+"\]" , "त्र" ,
+"\’" , "कृ" ,
+"Î" , "दृ" ,
+"\˙" , "हृ" ,
+"®" , "रु" ,
+"Â" , "रू" ,
+
+"\;" , "ा" ,
+"I" , "ी" ,
+"°" , "ी" ,
+"u" , "ु" ,
+"\⁄" , "ु" ,
+"ü" , "ु" ,
+"U" , "ू" ,
+"O" , "ृ" ,
+"é" , "ृ" , // ka ke niiche
+"ø" , "ॄ" , // 
+"e" , "े" ,
+"º" , "े" ,  // check it
+"π" , "े" ,
+"É" , "े" ,
+"w" , "ै" ,
+"¯" , "ै" ,
+"ì  " , "ै" , 
+"o" , "ो" ,
+"\*" , "ौ" ,
+"\'" , "ं" ,
+"÷" , "ं" ,
+"˘" , "ं" ,
+"\"" , "ः" ,
+"\(" , "्" ,
+"\±" , "्" , // beneath d etc
+"å" , "ऽ" ,
+
+"—" , "ॐ" ,
+"\)" , "।" ,
+"–" , "॥" ,
+
+"्ा" , "" ,
+"ेो" , "ौ" ,
+"ाै" , "ौ" ,
+"ाे" , "ो" ,
+"ेे" , "ै" ,
+
+"a" , "अ" ,
+"A" , "अ" ,
+"È" , "ई" ,
+"îR" , "ई" ,
+"î" , "इ" ,
+"¨" , "उ" ,
+"Ë" , "ऊ" ,
+"E" , "ए" ,
+"एे" , "ऐ" ,
+
+//"" ,	"ऋ" , 
+// "" ,	"ॠ" ,
+// "" ,	"ऌ" ,
+
+"अा" ,	"आ" ,
+"अौ" ,	"औ" ,
+"अो" ,	"ओ" ,
+"आॅ" ,	"ऑ"  		) 
+
+
+var array_one_length = array_one.length ;
+
+var modified_substring = document.getElementById("legacy_text").value  ;
+
+var text_size = document.getElementById("legacy_text").value.length ;
+	
+var processed_text = '' ;  //blank
+	
+	
+if(0) //document.getElementById("is_HTML").checked) 
+{
+
+var remaining_text = document.getElementById("legacy_text").value  ;
+
+var present_position = 0 ;
+
+
+while ( present_position != -1 )
+{
+var indx_br1 = remaining_text.indexOf( "\<") ;
+// expand this logic such that if < is preceded by \ (escape), it is not counted as opening angle bracket.
+
+if (indx_br1 != -1)
+{
+var modified_substring = remaining_text.substring( 0 , indx_br1 ) ;
+var indx_br2 = remaining_text.indexOf( "\>" , indx_br1+1) ;
+
+if (indx_br2 != -1)
+{
+var txt_within_ang_br = remaining_text.substring (indx_br1 , indx_br2+1) ; 
+var remaining_text = remaining_text.substring (indx_br2+1) ; 
+} else
+{
+var txt_within_ang_br = remaining_text.substring (indx_br1) ; 
+present_position = -1
+}
+
+} else
+{
+var modified_substring = remaining_text ;
+var txt_within_ang_br = '' ;
+present_position = -1 ;  // end of file reached
+}
+
+    Replace_Symbols( ) ;
+
+    processed_text += modified_substring + txt_within_ang_br;
+
+    document.getElementById("unicode_text").value = processed_text  ;
+}	
+}
+
+else
+{
+//************************************************************
+//  Break the long text into small bunches of max. max_text_size  characters each.
+//*************************************************************
+ 
+    var sthiti1 = 0 ;  var sthiti2 = 0 ;  var chale_chalo = 1 ;
+ 
+    var max_text_size = 6000;
+
+    while ( chale_chalo == 1 ) 
+    {
+     sthiti1 = sthiti2 ;
+
+     if ( sthiti2 < ( text_size - max_text_size ) )  
+     { 
+      sthiti2 +=  max_text_size ;
+	  while ( (document.getElementById("legacy_text").value.charAt( sthiti2 ) != '\n')&(document.getElementById("legacy_text").value.charAt( sthiti2 ) != '\t')&(document.getElementById("legacy_text").value.charAt( sthiti2 ) != ' ') )   {sthiti2-- ;}
+     } 
+     else  { sthiti2 = text_size  ;  chale_chalo = 0 }
+
+     var modified_substring = document.getElementById("legacy_text").value.substring ( sthiti1, sthiti2 )  ;
+	 
+
+    Replace_Symbols( ) ;
+
+    processed_text += modified_substring ;
+
+    document.getElementById("unicode_text").value = processed_text  ;
+   }
+   
+}   
+
+
+// --------------------------------------------------
+
+
+function Replace_Symbols( )
+
+{ 
+
+//substitute array_two elements in place of corresponding array_one elements
+
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
+
+modified_substring = modified_substring.replace( /([ ]*)‡([ ]*)/g , "" )
+
+// space before all matras, all rephs, all ्य , ्र and vaidik signs to be removed
+modified_substring = modified_substring.replace( /([ ]+)([R\|\;I°u\⁄üUOéeºπÉw¯ìo\*\'\˝÷˘\"\(\±å‰\[\^ÄûôÖÿÃ])/g , "$2" )
+
+// space AFTER hraswa i_kaar to be removed.
+modified_substring = modified_substring.replace( /([i…≤\‚\·Ææ])([ ]+)/g , "$1" )
+
+// space + ikar + maatraas/reph/vaidikSigns + space
+modified_substring = modified_substring.replace( /([ ]*)([i…≤\‚\·Ææ])([ ]*)([\|\;I°u\⁄üUOéeºπÉw¯ìo\*\'\˝÷˘\"\(\±å‰\[\^ÄûôÖÿÃR])([ ]*)/g , "$4$2" )
+
+// shift Reph before vaidik signs, half a (awagrah?), matras
+modified_substring = modified_substring.replace( /([\|\;I°u\⁄üUOéeºπÉw¯ìo\*\'\˝÷˘\"\(\±å‰\[\^ÄûôÖÿÃ]+)([R])/g , "$2$1" )
+
+{
+for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+
+{ 
+
+idx = 0  ;  // index of the symbol being searched for replacement
+
+while (idx != -1 ) //while-00
+{
+
+modified_substring = modified_substring.replace( array_one[ input_symbol_idx ] , array_one[input_symbol_idx+1] )
+idx = modified_substring.indexOf( array_one[input_symbol_idx] )
+
+} // end of while-00 loop
+
+} // end of for loop
+
+modified_substring = modified_substring.replace( /([॒॑]+)([ािीुूृेैोौंःँ]+)/g , "$2$1" );
+
+modified_substring = modified_substring.replace( /([ःंँ॰]+)([ािीुूृेैोौ]+)/g , "$2$1" );
+
+// कम¡ र ् ा ॒   ॒॑
+// **********************************************
+
+modified_substring = modified_substring.replace( /[i…≤\‚\·Ææ]([कखगघङचछजझञटठडढढ़णतथदधनपफबभमयरलळवशषसह])/g , "$1i" ) ;
+
+modified_substring = modified_substring.replace( /[i]([्])([कखगघङचछजझञटठडढढ़णतथदधनपफबभमयरलळवशषसह])/g , "$1$2i" ) ;
+
+modified_substring = modified_substring.replace( /[i]([्])([कखगघङचछजझञटठडढढ़णतथदधनपफबभमयरलळवशषसह])/g , "$1$2ि" ) ;
+
+modified_substring = modified_substring.replace( /i/g , "ि" ) ;
+
+
+//following three statement for adjusting position of reph ie, half r . 
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसह])([ािीुूृेैोौंँ]*)R/g , "R$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसह])([्])R/g , "R$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसह])([्])R/g , "र्$1$2" ) ;
+
+modified_substring = modified_substring.replace( /R/g , "र्" ) ;
+
+modified_substring = modified_substring.replace ( /([ ]+)([ऽ्ाीुूृेैोौंँः])/g , "$2" ) ;
+
+modified_substring = modified_substring.replace( /त्त्र/g , "त्र" )
+
+} // end of IF  statement  meant to  supress processing of  blank  string.
+
+} // end of the function  Replace_Symbols
+
+} // end of convert_to_unicode function
+
+
+</script>
+</head>
+
+<body>
+<form name="form1">
+<br/>
+<b>Maharshi Veda font</b> text-box<br/>
+<HTML><BODY bgColor='yellow'><CENTER>
+
+<textarea name="TextToConvert" id="legacy_text" cols="92" rows="5"></textarea> <br>
+
+<div align="middle">
+<CENTER><input  type="button" name="converter" id="converter" value=" Convert to Unicode >> " onClick="convert_to_unicode();" accesskey="c" title="शॉर्टकट alt+c"> 
+</div>  <br>
+
+<b><CENTER>Unicode</b> text-box<br/>
+<textarea name="ConvertedText" id="unicode_text" cols="92" rows="5"></textarea>
+<br />
+
+</form>
+</body>
+
+</html>
+
