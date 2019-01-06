@@ -1,0 +1,264 @@
+﻿<html>
+<head> <B><Font color = darkblue><CENTER> Anmol ==> Unicode Devanagari Font Converter (06-02-2012 ) </font></B>
+<title>Anmol font to Unicode Devanagari Font Converter</title><br>
+
+<script type="text/javascript">
+
+// Prepared for Shri Vishal Goel
+
+function convert_to_unicode()
+{
+
+var array_one = new Array(
+
+'1' , '१' ,	
+'2' , '२' ,
+'3' , '३' ,
+'4' , '४' ,
+'5' , '५' ,
+'6' , '६' ,
+'7' , '७' ,
+'8' , '८' ,
+'9' , '९' ,
+'0' , '०' ,
+
+'\[' , '।' ,
+'\]' , '।' ,
+
+//'-' , '-' ,
+//'=' , '=' ,
+//'!' , '!' ,
+
+//'*' , '*' ,
+//'(' , '(' ,
+//')' , ')' ,
+//'+' , '+' ,
+
+//';' , ';' ,	
+//'‘' , ''' ,
+
+//',' , ',' ,	
+//'.' , '.' ,	
+//'/' , '/' ,	
+
+//'?' , '?' ,	
+
+'@' , 'क्ष' ,
+'#' , 'क्' ,
+'\$' , 'ख्' ,
+'%' , 'घ्' ,
+'^' , 'ग्' ,	
+'&' , 'ण्' ,
+'q' , 'त' ,
+
+'r' , 'र' ,
+'t' , 'ट' ,
+
+//'~' , 'र्' ,
+//'_' , ' र्ं ' ,	
+
+'p' , 'प' ,	
+'|' , 'ङ' ,	
+'Q' , 'थ' ,
+
+//'R' , ', ,	
+'T' , 'ठ' ,
+
+'P' , 'फ' ,	
+'\{' , 'रु' ,
+'\}' , 'रू' ,	
+'\\' , 'ञ' ,	
+
+'s' , 'स' ,	
+'d' , 'द' ,	
+'f' , 'ड' ,	
+'g' , 'ग' ,	
+'h' , 'ह' ,	
+'j' , 'ज' ,	
+'k' , 'क' ,	
+'l' , 'ल' ,	
+	
+'S' , 'श' ,	
+'D' , 'ध' ,	
+'F' , 'ढ' ,	
+'G' , 'घ' ,	
+'H' , 'ह्' ,	
+'J' , 'झ' ,	
+'K' , 'ख' ,	
+'L' , 'ळ' ,	
+//':' , '"' ,	
+'\“' , 'भ' ,	
+'z' , 'ज्ञ' ,	
+'x' , 'ण' ,	
+'c' , 'च' ,	
+'v' , 'व' ,	 
+'b' , 'ब' ,	 
+'n' , 'न' ,
+'m' , 'म' ,	
+
+'Z' , 'त्र' ,	
+'X' , 'य' ,	 
+'C' , 'छ' ,	 
+'V' , 'ड़' ,	 
+'B' , 'भ' ,	
+'N' , 'न्' , 
+'M' , 'म्' ,	
+'\\' + '\'' , 'श्' ,
+'\\"' , 'ष्' ,
+
+'Ao' , 'ओ' ,
+'AO' , 'औ' ,
+'Aw' , 'आ' ,
+'A' , 'अ' ,
+'e\~' , 'ई' ,
+'e' , 'इ' ,
+'a' , 'उ' , 
+'Ey' , 'ऐ' ,
+'E' , 'ए' ,
+
+'्w' , '' ,
+'w' , 'ा' ,
+//'i' , '‌ि' ,
+'I' , 'ी' ,
+'u' , 'ु' ,
+'U' , 'ू' ,
+'\’' , 'ृ' ,
+'y' , 'े' ,
+'Y' , 'ै' ,
+'o' , 'ो' ,
+'O' , 'ौ' ,
+'W' , 'ाँ' ,	
+'\<' , 'ं' ,	
+'\>' , 'ँ' ,
+'अा' , 'आ'      ) 
+
+//**********************************************
+
+    var array_one_length = array_one.length ;
+
+    var modified_substring = document.getElementById("legacy_text").value  ;	
+	
+document.getElementById("unicode_text").value = "Conversion in progress.."  ;  
+
+//****************************************************
+//  Break the long text into small bunches of chunk_size  characters each.
+//****************************************************
+    var text_size = modified_substring.length ;
+
+    var processed_text = '' ;  //blank
+
+    var sthiti1 = 0 ;  var sthiti2 = 0 ;  var chale_chalo = 1 ;
+ 
+    var chunk_size = 6000; // this charecter long text will be processed in one go.
+
+    while ( chale_chalo == 1 ) 
+    {
+     sthiti1 = sthiti2 ;
+
+     if ( sthiti2 < ( text_size - chunk_size ) )  
+     { 
+      sthiti2 +=  chunk_size ;
+//      while (document.getElementById("legacy_text").value.charAt ( sthiti2 ) != ' ') {sthiti2--;} 
+//This was making problem if there is no 'space' in the whole document.
+     } 
+     else  { sthiti2 = text_size  ;  chale_chalo = 0 }
+
+  var modified_substring = document.getElementById("legacy_text").value.substring ( sthiti1, sthiti2 )  ;
+
+  Replace_Symbols( ) ;
+
+  var processed_text = processed_text + modified_substring ;
+	  
+document.getElementById("unicode_text").value = "Conversion in progress.." + '\n\n' + 'Conversion of ' + sthiti2 + ' charecters out of ' + text_size + ' completed.' ; 
+
+    }
+  
+document.getElementById("unicode_text").value = processed_text  ;  
+
+
+// --------------------------------------------------
+
+
+function Replace_Symbols( )
+
+{
+
+//substitute array_two elements in place of corresponding array_one elements
+
+if ( modified_substring != "" )  // if stringto be converted is non-blank then no need of any processing.
+{
+for ( input_symbol_idx = 0;   input_symbol_idx < array_one_length-1;    input_symbol_idx = input_symbol_idx + 2 )
+
+{ 
+//******************************************************
+idx = 0  ;  // index of the symbol being searched for replacement
+
+while (idx != -1 ) //while-00
+{
+
+modified_substring = modified_substring.replace( array_one[ input_symbol_idx ] , array_one[input_symbol_idx+1] )
+idx = modified_substring.indexOf( array_one[input_symbol_idx] )
+
+} // end of while-00 loop
+
+} // end of for loop
+
+
+// following statements for adjusting postion of i maatraas.
+
+modified_substring = modified_substring.replace(   /([i])([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक्ष])/g , "$2$1" ) ;
+
+modified_substring = modified_substring.replace(   /([i])(्)([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक्ष])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace(   /([i])(्)([कखगघङचछजझञटठडड़ढढ़णतथदधनपफबभमयरलवशषसहक्ष])/g , "$2$3$1" ) ;
+
+modified_substring = modified_substring.replace( /i/g , "ि" ) ;
+//modified_substring = modified_substring.replace( /q/g , "ि" ) ;
+//modified_substring = modified_substring.replace( /E/g , "िं" ) ;
+
+
+//following three statement for adjusting position of reph ie, half r .
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसहक्षज्ञ])([ािीुूृेैोौंँ]*)([~])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /([कखगघचछजझटठडड़ढढ़णतथदधनपफबभमयरलळवशषसहक्षज्ञ])([्])([~])/g , "$3$1$2" ) ;
+
+modified_substring = modified_substring.replace( /~/g , "र्" ) ;
+
+
+} // end of IF  statement  meant to  supress processing of  blank  string.
+
+} // end of the function  Replace_Symbols
+
+} // end of convert_to_unicode function
+
+
+function clear_unicode_textbox ()
+{ document.getElementById("unicode_text").value = "" ; }
+
+</script>
+</head>
+
+
+<body>
+<form name="form1"><br/>
+<b>Anmol font text-box </b><br/>
+<HTML><BODY bgColor='yellow'><CENTER>
+
+<textarea name="TextToConvert" id="legacy_text" cols="80" rows="6"></textarea> <br>
+
+<div align="middle">
+<CENTER><input  type="button" name="converter" id="converter" value=" Convert to Unicode >> " onClick="convert_to_unicode();" accesskey="c" title="शॉर्टकट alt+c"> 
+</div>  <br>
+
+<b><CENTER>Unicode Devanagari text-box</b> <br/>
+<textarea name="ConvertedText" id="unicode_text" cols="80" rows="8"></textarea>
+<br />
+
+<div align="middle">
+<CENTER><input  type="button" value=" Clear this box " onClick="clear_unicode_textbox ();" </div>  <br>
+
+</form>
+</body>
+
+</html>
+
